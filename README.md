@@ -1,23 +1,35 @@
 # RISC-V Assembler
-Assembler and Simulator for the 4-bit K2 Microprocessor implemented in C.
-This project includes:
 
-An Assembler that converts K2 ISA assembly programs into machine code (.bin).
+This project implements an **Assembler** and a **Simulator** for the **4-bit K2 Microprocessor** in C.  
+It demonstrates fundamental concepts of **computer architecture**, **assembly translation**, and **processor simulation**.
 
-A Simulator that executes machine code on a modelled K2 microprocessor architecture.
+---
 
-Support for fundamental instructions such as arithmetic operations, register transfers, immediate loads, and conditional/unconditional jumps.
+## 📖 Overview
+The project consists of:
+- **Assembler** → Converts K2 ISA assembly (`.asm`) files into machine code (`.bin`).
+- **Simulator** → Loads and executes machine code on a modeled K2 processor.
+- **Example Program** → Fibonacci sequence generator written in K2 assembly.
+- **Makefile** → For easy compilation and execution.
 
-Example program: Fibonacci sequence generator written in K2 assembly.
+---
 
-Includes a Makefile for easy compilation and execution.
+## ⚙️ Features
+- Supports the following instruction set:
+  - `RA = RA + RB` → Add registers and store result in RA
+  - `RB = RA + RB` → Add registers and store result in RB
+  - `RA = RA - RB` → Subtract RB from RA
+  - `RB = RA - RB` → Subtract RB from RA
+  - `RO = RA` → Move RA into output register
+  - `RA = imm` → Load immediate value into RA
+  - `RB = imm` → Load immediate value into RB
+  - `Jump carry imm` → Jump if carry flag set
+  - `Jump imm` → Unconditional jump
 
-This project was developed to gain hands-on experience with:
+---
 
-Instruction Set Architecture (ISA) design
-
-Microprocessor simulation in C
-
-Bare-metal programming concepts
-
-Fundamentals of computer architecture
+## 🖥️ Architecture
+The **K2 Microprocessor** is a simple **4-bit microprocessor** supporting:
+- Two general-purpose registers (`RA`, `RB`)
+- One output register (`RO`)
+- Basic arithmetic, data transfer, and control flow instructions.
